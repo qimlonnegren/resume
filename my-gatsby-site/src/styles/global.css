@@ -1,0 +1,101 @@
+
+
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #41B3A3;  
+    padding: 0.1rem;  
+}
+
+span {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+span p {
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    margin: 0 0 0 2rem;
+}
+
+nav {
+    display: flex;
+padding: 0 2rem 0 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 0.5rem 0 0.5rem;
+    height: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* main */
+.app {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+
+main {
+    background-color: rgb(126, 195, 176);  
+    /* background-color: rgb(65, 172, 136); */
+    padding: 1rem;
+}
+
+
+h1, h2, h3 {
+    color: white;
+}
+
+/* article */
+
+.article-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+article {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    border: solid 1px blanchedalmond;
+    border-radius: 10px;
+    width: 20rem;
+    height: 25rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #41B3A3; 
+    padding: 1rem;
+}
+
+footer ul {
+    color: black;
+    list-style: none;
+}
+
+footer ul li {
+    color: black;
+    text-decoration: none;
+}

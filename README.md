@@ -1,0 +1,5 @@
+README
+
+Plugins:
+
+- Font Awesome
