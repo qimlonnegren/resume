@@ -12,10 +12,13 @@ const NotFoundPage = () => {
       <Header />
 
       <main>
-        <section>
-        <h1>404</h1>
-      <h2>Oops, something strange happened. Cannot find what your are looking for</h2>
-      <Link to="/">Press here to go to home page</Link>
+        <section className="error-page-section">
+          <h1>404</h1>
+          <h2>
+            Oops, something strange happened. Cannot find what your are looking
+            for.
+          </h2>
+          <Link to="/">Back to home page</Link>
         </section>
       </main>
       <Footer />
@@ -26,4 +29,3 @@ const NotFoundPage = () => {
 export default NotFoundPage
 
 export const Head = () => <title>Not found</title>
-
