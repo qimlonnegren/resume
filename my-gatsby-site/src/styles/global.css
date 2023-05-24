@@ -12,7 +12,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #154b44;  
-    /* padding: 0.1rem;   */
+    min-height: 3rem;
 }
 
 header span p {
@@ -37,7 +37,7 @@ nav ul {
 }
 
 nav ul li {
-    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+    /* padding: 0.8rem 0.8rem 0.8rem 0.8rem; */
     margin: 0 0.6rem 0 0.6rem;
     height: 1rem;
     border-radius: 5px 5px 0 0;
@@ -46,14 +46,18 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+    border-radius: 5px 5px 0 0;
 }
 
-nav ul li:hover {
+nav ul li:hover,
+nav ul li a:hover {
     background-color: rgb(20, 52, 42);
     color: rgb(205, 255, 202);
 }
 
-nav ul li:active {
+nav ul li:active,
+nav ul li a:hover {
     color: rgb(123, 228, 117);
 }
 

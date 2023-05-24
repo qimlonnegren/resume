@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: `Qim Lönnegren frontend resume`,
     description: `Student frontend developter resume`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://superb-squirrel-cf7456.netlify.app/`,
   },
   plugins: [{
     resolve: 'gatsby-source-contentful',

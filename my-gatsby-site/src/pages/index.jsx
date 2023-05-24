@@ -33,11 +33,11 @@ export const Head = () => (
   <>
     <meta
       name="description"
-      content="Frontend developer student protfolio for projects."
+      content="Frontend developer student projects portfolio."
     />
     <meta
       name="keywords"
-      content="HTML5, CSS, JavaScript, React, Gatsby, graphQl, frontend developer student"
+      content="HTML5, CSS, JavaScript, React, Gatsby, graphQl, frontend developer student, frontend"
     />
     <title>Home</title>
   </>
