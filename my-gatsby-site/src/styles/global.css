@@ -7,6 +7,11 @@ body {
 
 /* header */
 
+
+
+
+/*  */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -60,6 +65,8 @@ nav ul li:active,
 nav ul li a:hover {
     color: rgb(123, 228, 117);
 }
+
+/*  */
 
 
 /* main */
@@ -398,6 +405,12 @@ footer ul li a:active {
     header {
         justify-content: center;
     }
+    header span p {
+        color: white;
+        font-size: x-large;
+        font-weight: bold;
+        margin: 0.2rem 0 0 2rem;
+    }
     header span {
       display: none;
     }
@@ -412,6 +425,39 @@ footer ul li a:active {
     .about-me-section {
         padding: 0.5rem;
     }
+    nav {
+        display: flex;
+        padding: 0 2rem 0 2rem;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        margin: 0.2rem 0 0 0;
+    }
+    
+    nav ul li {
+        padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+        margin: 0 0.6rem 0 0.6rem;
+        height: 1rem;
+        border-radius: 5px 5px 0 0;
+    }
+    
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    nav ul li:hover {
+        background-color: rgb(20, 52, 42);
+        color: rgb(205, 255, 202);
+    }
+    
+    nav ul li:active {
+        color: rgb(123, 228, 117);
+    }
   }
 
   @media screen and (max-width: 841px) {
@@ -419,3 +465,4 @@ footer ul li a:active {
         margin-top: 2rem;
     }
   }
+
