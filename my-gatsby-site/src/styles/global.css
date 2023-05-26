@@ -305,6 +305,21 @@ article {
     border-radius: 10px;
 }
 
+.category-button {
+    background-color: #154b44;
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 10px;
+    /* border: 1px solid black; */
+    margin: 0.3rem 0.4rem 0.2rem 0.4rem;
+    min-width: 3rem;
+    font-size: larger;
+}
+
+.category-button p {
+    margin: 0;
+}
+
 /* project */
 
 .single-project-article {

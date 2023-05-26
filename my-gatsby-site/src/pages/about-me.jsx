@@ -84,7 +84,19 @@ const AboutMePage = ({ data }) => {
 
 export default AboutMePage
 
-export const Head = () => <title>About Me</title>
+export const Head = () => (
+  <>
+    <meta
+      name="description"
+      content="Frontend developer student projects portfolio."
+    />
+    <meta
+      name="keywords"
+      content="HTML5, CSS, JavaScript, React, Gatsby, graphQl, frontend developer student, frontend"
+    />
+    <title>Projects</title>
+  </>
+)
 
 //  GraphQL Query
 export const query = graphql`

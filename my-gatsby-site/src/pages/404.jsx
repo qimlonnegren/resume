@@ -28,4 +28,16 @@ const NotFoundPage = () => {
 
 export default NotFoundPage
 
-export const Head = () => <title>Not found</title>
+export const Head = () => (
+  <>
+    <meta
+      name="description"
+      content="Frontend developer student projects portfolio."
+    />
+    <meta
+      name="keywords"
+      content="HTML5, CSS, JavaScript, React, Gatsby, graphQl, frontend developer student, frontend"
+    />
+    <title>Not found</title>
+  </>
+)

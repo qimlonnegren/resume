@@ -1,11 +1,11 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-// import { graphql } from "gatsby"
 import Footer from "./footer"
 import Header from "./header"
-// Import global CSS file from styles
 import "../styles/global.css"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
+import { useState } from "react"
 
 // Projektöversiktssida
 // Minst titel, beskrivning, 3 skärmdumpar av projektet samt en länk till
@@ -18,6 +18,13 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 // Kategoriseringen ska vara dynamisk och ändras med innehållet.
 
 const ProjectsPage = ({ data }) => {
+  const [category, setCategory] = useState("")
+  const projectsCategory = category
+    ? data.allContentfulProjectModel.edges.filter((project) =>
+        project.node.projectCategory.includes(category)
+      )
+    : data.allContentfulProjectModel.edges
+
   return (
     <div className="app">
       <Header />
@@ -26,13 +33,28 @@ const ProjectsPage = ({ data }) => {
           <div>
             <h1>My projects</h1>
           </div>
-          <div className="about-me-article-div">
+          <div>
+            <h2>Categories</h2>
+
             {data.allContentfulProjectModel.edges.map(({ node }) => {
+              return (
+                <button
+                  className="category-button"
+                  onClick={function () {
+                    setCategory(node.projectCategory)
+                  }}
+                >
+                  <p>{node.projectCategory}</p>
+                </button>
+              )
+            })}
+          </div>
+          <div className="about-me-article-div">
+            {projectsCategory.map(({ node }) => {
               const image = getImage(node.projectSingleImage1)
               return (
                 <Link to={`/project/${node.slug}`}>
                   <article className="my-projects-article">
-                    {/* <Link to={`./project/${pokemon.name}/ability/${ability.name}`}> */}
                     <h2>{node.projectTitle}</h2>
                     <p>{node.projectDescription}</p>
                     <GatsbyImage
@@ -40,7 +62,6 @@ const ProjectsPage = ({ data }) => {
                       alt={node.projectSingleImage1.description}
                     />
                   </article>
-                  {/* Click here to view</Link> */}
                 </Link>
               )
             })}
@@ -54,7 +75,19 @@ const ProjectsPage = ({ data }) => {
 
 export default ProjectsPage
 
-export const Head = () => <title>Projects</title>
+export const Head = () => (
+  <>
+    <meta
+      name="description"
+      content="Frontend developer student projects portfolio."
+    />
+    <meta
+      name="keywords"
+      content="HTML5, CSS, JavaScript, React, Gatsby, graphQl, frontend developer student, frontend"
+    />
+    <title>Projects</title>
+  </>
+)
 
 //  GraphQL Query
 export const ProjectPageQuery = graphql`
@@ -65,6 +98,7 @@ export const ProjectPageQuery = graphql`
           projectTitle
           projectDescription
           slug
+          projectCategory
           projectSingleImage1 {
             # file {
             #   url
